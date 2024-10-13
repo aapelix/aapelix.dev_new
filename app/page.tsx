@@ -43,51 +43,63 @@ export default function Home() {
     setFRepos(filtered);
   }, [input, repos]);
 
+  const carouselItems = [
+    {
+      image: qr_image,
+      alt: "Showcase image of my QR code generator",
+      title: "aapelix/qr - qr code generator",
+      github: "https://github.com/aapelix/qr",
+      releases: "https://github.com/aapelix/qr/releases",
+    },
+    {
+      image: img4,
+      alt: "Showcase image of my weather app",
+      title: "weather.aapelix.dev - weather app",
+      github: "https://github.com/aapelix/weather.aapelix.dev",
+      site: "https://weather.aapelix.dev",
+    },
+    {
+      image: img3,
+      alt: "Showcase image of blocksmined mod",
+      title: "blocksmined - minecraft mod to track total blocks mined",
+      github: "https://github.com/aapelix/blocksmined",
+      modrinth: "https://modrinth.com/mod/blocksmined",
+    },
+    {
+      image: img2,
+      alt: "Showcase image of aocs",
+      title: "aocs - docs generator made with rust",
+      github: "https://github.com/aapelix/aocs",
+    },
+  ];
+
+  const [randomItem, setRandomItem] = useState<any>(null);
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * carouselItems.length);
+    setRandomItem(carouselItems[randomIndex]);
+  }, []);
+
   return (
     <div className="grid bg-black grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 sm:p-8 lg:p-20 gap-8 sm:gap-16 pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="mt-[40rem] lg:mt-16 md:mt-96 sm:mt-96">
-        <Carousel className="mt-[20rem] sm:mt-[40rem] lg:mt-[95rem] lg:block">
-          <CarouselContent>
-            <CarouselItem className="flex flex-col justify-center items-center">
-              <Image src={qr_image} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
-              <div className="mt-2 flex gap-2">
-                <p className="text-zinc-300">aapelix/qr - qr code generator</p>
-                <p className="text-zinc-300">&#124;</p>
-                <a href="https://github.com/aapelix/qr" className="text-zinc-300 hover:underline">GitHub</a>
-                <a href="https://github.com/aapelix/qr/releases" className="text-zinc-300 hover:underline">Releases</a>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="flex flex-col justify-center items-center">
-              <Image src={img4} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
-              <div className="mt-2 flex gap-2">
-                <p className="text-zinc-300">weather.aapelix.dev - weather app</p>
-                <p className="text-zinc-300">&#124;</p>
-                <a href="https://github.com/aapelix/weather.aapelix.dev" className="text-zinc-300 hover:underline">GitHub</a>
-                <a href="https://weather.aapelix.dev" className="text-zinc-300 hover:underline">Site</a>
-              </div>
-            </CarouselItem>
-            
-            <CarouselItem className="flex flex-col justify-center items-center">
-              <Image src={img3} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
-              <div className="mt-2 flex gap-2">
-                <p className="text-zinc-300">blocksmined - minecraft mod to track total blocks mined</p>
-                <p className="text-zinc-300">&#124;</p>
-                <a href="https://github.com/aapelix/blocksmined" className="text-zinc-300 hover:underline">GitHub</a>
-                <a href="https://modrinth.com/mod/blocksmined" className="text-zinc-300 hover:underline">Modrinth</a>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="flex flex-col justify-center items-center">
-              <Image src={img2} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
-              <div className="mt-2 flex gap-2">
-                <p className="text-zinc-300">aocs - docs generator made with rust</p>
-                <p className="text-zinc-300">&#124;</p>
-                <a href="https://github.com/aapelix/aocs" className="text-zinc-300 hover:underline">GitHub</a>
-              </div>
-            </CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      {randomItem && (
+          <Carousel className="mt-[20rem] sm:mt-[40rem] lg:mt-[95rem] lg:block">
+            <CarouselContent>
+              <CarouselItem className="flex flex-col justify-center items-center">
+                <Image src={randomItem.image} alt={randomItem.alt} className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
+                <div className="mt-2 flex gap-2">
+                  <p className="text-zinc-300">{randomItem.title}</p>
+                  <p className="text-zinc-300">|</p>
+                  {randomItem.github && <a href={randomItem.github} className="text-zinc-300 hover:underline">GitHub</a>}
+                  {randomItem.releases && <a href={randomItem.releases} className="text-zinc-300 hover:underline">Releases</a>}
+                  {randomItem.site && <a href={randomItem.site} className="text-zinc-300 hover:underline">Site</a>}
+                  {randomItem.modrinth && <a href={randomItem.modrinth} className="text-zinc-300 hover:underline">Modrinth</a>}
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
+        )}
         <div className="translate-y-24 sm:translate-y-44 pb-16">
           <h1 className="text-white font-extrabold text-4xl sm:text-6xl lg:text-9xl">It&apos;s me, aapelix</h1>
           <h1 className="text-white font-extrabold text-4xl sm:text-6xl lg:text-9xl rotate-180">It&apos;s me, aapelix</h1>
