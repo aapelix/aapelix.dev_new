@@ -91,7 +91,7 @@ export default function Home() {
                 <div className="mt-2 flex gap-2">
                   <p className="text-zinc-300">{randomItem.title}</p>
                   <p className="text-zinc-300">|</p>
-                  {randomItem.github && <a href={randomItem.github} className="text-zinc-300 hover:underline">GitHub</a>}
+                  {randomItem.github && <a href={randomItem.github} className="text-zinc-300 hover:underline">Github</a>}
                   {randomItem.releases && <a href={randomItem.releases} className="text-zinc-300 hover:underline">Releases</a>}
                   {randomItem.site && <a href={randomItem.site} className="text-zinc-300 hover:underline">Site</a>}
                   {randomItem.modrinth && <a href={randomItem.modrinth} className="text-zinc-300 hover:underline">Modrinth</a>}
@@ -108,7 +108,7 @@ export default function Home() {
             <a href="https://url.aapelix.dev/4rCO" className="bg-[#1a1a1a] rounded-3xl">
               <button className="w-full sm:w-auto px-6 py-3 sm:py-6 flex gap-2 hover:px-16 sm:hover:px-28 duration-300">
                 <Github color="white" />
-                <p className="font-bold">GitHub</p>
+                <p className="font-bold">Github</p>
               </button>
             </a>
             <a href="https://url.aapelix.dev/eYMe" className="bg-[#1a1a1a] rounded-3xl">
