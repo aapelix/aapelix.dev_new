@@ -162,14 +162,14 @@ export default function Home() {
               ))}
               <button
                 className="bg-blue-500 py-1 px-2 rounded-full text-white hover:scale-105 duration-300 disabled:cursor-not-allowed"
-                disabled={limit >= fRepos.length}
-                onClick={() => setLimit(limit + 3)}
+                disabled={ limit >= fRepos.length }
+                onClick={() => setLimit(limit + 5)}
               >
                 Show more
               </button>
               <button
                 className="bg-blue-500 ml-2 py-1 px-2 rounded-full text-white hover:scale-105 duration-300 disabled:cursor-not-allowed"
-                disabled={ limit == 5}
+                disabled={ limit == 5 }
                 onClick={() => setLimit(5)}
               >
                 Show less
