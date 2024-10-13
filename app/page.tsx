@@ -52,7 +52,7 @@ export default function Home() {
               <Image src={qr_image} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
               <div className="mt-2 flex gap-2">
                 <p className="text-zinc-300">aapelix/qr - qr code generator</p>
-                <p className="text-zinc-300">|</p>
+                <p className="text-zinc-300">&#124;</p>
                 <a href="https://github.com/aapelix/qr" className="text-zinc-300 hover:underline">GitHub</a>
                 <a href="https://github.com/aapelix/qr/releases" className="text-zinc-300 hover:underline">Releases</a>
               </div>
@@ -61,7 +61,7 @@ export default function Home() {
               <Image src={img4} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
               <div className="mt-2 flex gap-2">
                 <p className="text-zinc-300">weather.aapelix.dev - weather app</p>
-                <p className="text-zinc-300">|</p>
+                <p className="text-zinc-300">&#124;</p>
                 <a href="https://github.com/aapelix/weather.aapelix.dev" className="text-zinc-300 hover:underline">GitHub</a>
                 <a href="https://weather.aapelix.dev" className="text-zinc-300 hover:underline">Site</a>
               </div>
@@ -71,7 +71,7 @@ export default function Home() {
               <Image src={img3} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
               <div className="mt-2 flex gap-2">
                 <p className="text-zinc-300">blocksmined - minecraft mod to track total blocks mined</p>
-                <p className="text-zinc-300">|</p>
+                <p className="text-zinc-300">&#124;</p>
                 <a href="https://github.com/aapelix/blocksmined" className="text-zinc-300 hover:underline">GitHub</a>
                 <a href="https://modrinth.com/mod/blocksmined" className="text-zinc-300 hover:underline">Modrinth</a>
               </div>
@@ -80,7 +80,7 @@ export default function Home() {
               <Image src={img2} alt="Showcase image of my QR code generator" className="rounded-3xl w-full sm:w-2/3 lg:w-1/2" />
               <div className="mt-2 flex gap-2">
                 <p className="text-zinc-300">aocs - docs generator made with rust</p>
-                <p className="text-zinc-300">|</p>
+                <p className="text-zinc-300">&#124;</p>
                 <a href="https://github.com/aapelix/aocs" className="text-zinc-300 hover:underline">GitHub</a>
               </div>
             </CarouselItem>
@@ -89,8 +89,8 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
         <div className="translate-y-24 sm:translate-y-44 pb-16">
-          <h1 className="text-white font-extrabold text-4xl sm:text-6xl lg:text-9xl">It's me, aapelix</h1>
-          <h1 className="text-white font-extrabold text-4xl sm:text-6xl lg:text-9xl rotate-180">It's me, aapelix</h1>
+          <h1 className="text-white font-extrabold text-4xl sm:text-6xl lg:text-9xl">It&apos;s me, aapelix</h1>
+          <h1 className="text-white font-extrabold text-4xl sm:text-6xl lg:text-9xl rotate-180">It&apos;s me, aapelix</h1>
           
           <div id="socials" className="w-full flex justify-center items-center mt-5 text-white gap-3 flex-wrap">
             <a href="https://url.aapelix.dev/4rCO" className="bg-[#1a1a1a] rounded-3xl">
